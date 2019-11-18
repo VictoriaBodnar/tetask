@@ -14,7 +14,11 @@
 		                <div class="card-body">
 		                  <p class="card-text">{{ $bpost->text }}</p>
 		                  <div class="d-flex justify-content-between align-items-center">
-		                    
+		                    <div class="btn-group">
+		                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="renderItem('{{ $bpost->id }}')">Search</button> 
+		                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="updateItem('{{ $bpost->id }}')">Insert</button>
+		                      
+		                    </div>
 		                    <small class="text-muted">9 mins</small>
 		                  </div>
 		                </div>
