@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+/*Route::get('/', function () {
+   return view('demo');
+});*/
+
+Route::get('/','BpostController@index');
+Route::post('/saveImg/{id}','BpostController@updatePOST');
+Route::get('/saveImg/{id}','BpostController@update');
