@@ -15,9 +15,9 @@
     return view('welcome');
 });*/
 
-/*Route::get('/', function () {
-   return view('demo');
-});*/
+Route::get('/localStor', function () {
+   return view('demoL');
+});
 
 Route::get('/','BpostController@index');
 Route::post('/saveImg/{id}','BpostController@updatePOST');

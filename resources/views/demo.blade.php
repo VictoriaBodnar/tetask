@@ -7,8 +7,7 @@
            <div class="row">
            	@if (count($bposts) > 0)
 	           	@foreach ($bposts as $bpost)
-	           		
-		            <div class="col-md-4">
+	           		<div class="col-md-4">
 		              <div  class="card mb-4 box-shadow">
 		                <img id="{{ $bpost->id }}" class="card-img-top" src="{{ $bpost->img_url }}" alt="Card image cap">
 		                <div class="card-body">
