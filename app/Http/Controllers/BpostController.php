@@ -70,16 +70,11 @@ class BpostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)//Request $request,
+    public function update(Request $request)//Request $request,
     {
-        //return ('********'.$id);
-        $q='https://images.unsplash.com/photo-1561655542-e9026bc2e0ee?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=410';
-        $bpost = bpost::find($id); // Retrieve a model by its primary key...
-        /*$bpost->img_url = 'https://images.unsplash.com/photo-1561655542-e9026bc2e0ee?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=410';*/
-        $bpost->img_url = $q;
+        $bpost = bpost::find($request->a); // Retrieve a model by its primary key...
+        $bpost->img_url = $request->b;
         $bpost->save();
-        //return redirect('/')->with('alert', 'Запис збережено!');
-         return ('Item save---');
     }
 
     

@@ -11,22 +11,20 @@
 <script>
 const numItemsToGenerate = 1; 
 
-function renderItem(im_id){
-	console.log(im_id);
-  var tem,item;
-  fetch('https://source.unsplash.com/410x200/?ocean').then((response)=> {   
+function renderItem(im_id, sp_id){
+        console.log(im_id);
+        var tem,item, ww;
+        fetch('https://source.unsplash.com/410x200/?mountains').then((response)=> { 
+            console.log(response);  
+            tem = document.getElementById(im_id);
+            tem.setAttribute("src", response.url);
+        }) 
+        .catch(rejected => {
+        console.log(rejected);
+        document.getElementById(sp_id).innerHTML = "<p>network error</p>";
+        })
+      }
 
-  	let nitem = document.createElement('img');
-  	nitem.setAttribute("id", im_id);
-  	nitem.setAttribute("src", response.url);
-  	nitem.setAttribute("class", 'card-img-top');
-    tem = document.getElementById(im_id);
-  	item = tem.parentNode;
-    item.replaceChild(nitem, tem);
-    
-  })
-   
-}
 function updateItem(im_id){
 
 var q = document.getElementById( im_id ).src;
@@ -40,5 +38,32 @@ urlStr="/saveImg/"+im_id+"/";
  x.send(null);  
 
 }
+function updateItem(im_id, sp_id){
+var q = document.getElementById( im_id ).src;
+	
+(async () => {
+
+  const rawResponse = await fetch('/saveImg', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({a: im_id, b: q})
+  });
+  const status = await rawResponse.status;
+  var st = status;
+
+  if (st == 200) {
+  		document.getElementById(sp_id).innerHTML = "<p>saved</p>";
+  }else{
+  		document.getElementById(sp_id).innerHTML = "<p>saving error</p>";
+  }
+
+  console.log(status);
+})();
+
+}
+
 
 </script>

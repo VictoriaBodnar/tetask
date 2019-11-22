@@ -68,7 +68,7 @@
             <div class="col-md-4">
               <span id="s1"></span>
               <div class="card mb-4 box-shadow">
-                <img id = "i1" class="card-img-top" src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img id = "i1" class="card-img-top" src="{{ asset('pic/IMAGE_HOLDER.png') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -84,7 +84,7 @@
             <div class="col-md-4">
               <span id="s2"></span>
               <div class="card mb-4 box-shadow">
-                <img id = "i2" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img id = "i2" class="card-img-top" data-src="{{ asset('pic/IMAGE_HOLDER.png') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -100,7 +100,7 @@
             <div class="col-md-4">
               <span id="s3"></span>
               <div class="card mb-4 box-shadow">
-                <img id = "i3" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img id = "i3" class="card-img-top" data-src="{{ asset('pic/IMAGE_HOLDER.png') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">

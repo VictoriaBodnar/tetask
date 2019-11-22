@@ -20,5 +20,5 @@ Route::get('/localStor', function () {
 });
 
 Route::get('/','BpostController@index');
-Route::post('/saveImg/{id}','BpostController@updatePOST');
-Route::get('/saveImg/{id}','BpostController@update');
+Route::post('/saveImg','BpostController@update');
+//Route::get('/saveImg/{id}','BpostController@update');

@@ -8,14 +8,15 @@
            	@if (count($bposts) > 0)
 	           	@foreach ($bposts as $bpost)
 	           		<div class="col-md-4">
+	           		  <span id="s{{ $bpost->id }}"></span>
 		              <div  class="card mb-4 box-shadow">
 		                <img id="{{ $bpost->id }}" class="card-img-top" src="{{ $bpost->img_url }}" alt="Card image cap">
 		                <div class="card-body">
 		                  <p class="card-text">{{ $bpost->text }}</p>
 		                  <div class="d-flex justify-content-between align-items-center">
 		                    <div class="btn-group">
-		                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="renderItem('{{ $bpost->id }}')">Search</button> 
-		                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="updateItem('{{ $bpost->id }}')">Insert</button>
+		                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="renderItem('{{ $bpost->id }}','s{{ $bpost->id }}')">Search</button> 
+		                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="updateItem('{{ $bpost->id }}','s{{ $bpost->id }}')">Insert</button>
 		                      
 		                    </div>
 		                    <small class="text-muted">9 mins</small>
